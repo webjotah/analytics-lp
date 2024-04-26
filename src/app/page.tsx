@@ -1,18 +1,22 @@
 import Image from 'next/image';
 import BackgroundTop from '../assets/bg/background-top.svg';
-import Logo from '../assets/logo.png';
+import Logo from '../assets/logo.svg';
 import MainScreen from '../assets/main-screen.svg';
 
 export default function Home() {
   return (
     <>
-      <div className="absolute -z-10">
-        <Image src={BackgroundTop} alt="logo" width={1920} />
+      <div className="absolute -z-10 w-[1920px]">
+        <Image src={BackgroundTop} alt="Background" />
       </div>
-      <main className="flex min-h-screen flex-col items-center justify-between px-36 py-9">
+      <main className="flex min-h-screen flex-col items-center px-36 py-9">
+        {/* Default header */}
+        <header></header>
+
+        {/* Responsive header */}
         <header>
-          <div className="icon">
-            <Image src={Logo} alt="logo" width={140} height={100} />
+          <div>
+            <Image src={Logo} alt="Logo" width={100} />
           </div>
         </header>
       </main>
