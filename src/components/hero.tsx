@@ -4,9 +4,9 @@ import HeroMobile from '../assets/hero/main-screen-small.svg';
 export default function HeroSection() {
   return (
     <>
-      <div className="w-full flex flex-col items-center">
+      <div className="w-full flex flex-col items-center h-screen">
         <Image src={HeroMobile} alt="heroMobileImage" className="w-full" />
-        <div className="flex flex-col items-center mb-6 gap-3">
+        <div className="flex flex-col items-center mb-10 gap-5">
           <h1 className="text-zinc-100 text-4xl w-[93%] font-bold leading-tight">
             Monitor your business on real-time dashboard
           </h1>
