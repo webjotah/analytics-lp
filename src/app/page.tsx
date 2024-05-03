@@ -1,4 +1,12 @@
 import ContentSection from '@/components/content';
+import Plans from '@/components/plans';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
 import { Separator } from '@/components/ui/separator';
 import {
   Sheet,
@@ -14,6 +22,8 @@ import BackgroundTop from '../assets/bg/background-top.svg';
 import Clock from '../assets/icons/clock.svg';
 import Monitor from '../assets/icons/monitor.svg';
 import Rocket from '../assets/icons/rocket.svg';
+import Social from '../assets/icons/social buttons.svg';
+import LogoBW from '../assets/logo-bw.svg';
 import Logo from '../assets/logo.svg';
 import Content1 from '../assets/screen-01.svg';
 import Content2 from '../assets/screen-02.svg';
@@ -77,7 +87,7 @@ export default function Home() {
 
         {/* Icons Content Section */}
         <div className="w-full flex flex-col gap-10">
-          <div className="mt-[30vh] flex flex-col gap-5">
+          <div className="mt-[15vh] flex flex-col gap-5">
             <h1 className="text-primary font-bold text-3xl">Main Features</h1>
             <p className="text-secondary leading-tight">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum
@@ -146,7 +156,7 @@ export default function Home() {
         </div>
 
         {/* Pricing Plans */}
-        {/*<div className="mt-[30vh]">
+        <div className="mt-32 flex flex-col items-center max-w-full">
           <div className="flex flex-col gap-5">
             <h1 className="text-zinc-100 text-3xl bold">Pricing Plans</h1>
             <p className="text-secondary">
@@ -154,13 +164,36 @@ export default function Home() {
               nisi aliquet volutpat pellentesque volutpat est.{' '}
             </p>
           </div>
-           Carrousel 
+          {/* Carrousel */}
+          <div className="my-14 flex justify-center">
+            <Carousel className="w-full max-w-[65vw]">
+              <CarouselContent>
+                <CarouselItem>
+                  <Plans title="Starter" value={29} users={3} />
+                </CarouselItem>
+                <CarouselItem>
+                  <Plans title="Standard" value={99} users={20} />
+                </CarouselItem>
+                <CarouselItem>
+                  <Plans title="Premium" value={299} users={200} />
+                </CarouselItem>
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
+          </div>
+          <Separator className="bg-secondary" />
         </div>
-  */}
+        {/* Footer */}
+        <div className="my-8 w-full justify-between flex items-center">
+          <Image src={LogoBW} alt="Logo" className="w-32" />
+          <Image src={Social} alt="Logo" className="w-32" />
+        </div>
       </div>
-      {/* <div className="absolute bottom-0 -z-10 lg:w-auto w-[1600px]">
+
+      <div className="absolute bottom-0 -z-10 lg:w-auto w-[1200px]">
         <Image src={BackgroundBottom} alt="Background" />
-      </div> */}
+      </div>
     </>
   );
 }
