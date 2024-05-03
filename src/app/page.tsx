@@ -86,8 +86,8 @@ export default function Home() {
         </div>
 
         {/* Icons Content Section */}
-        <div className="w-full flex flex-col gap-10">
-          <div className="mt-[15vh] flex flex-col gap-5">
+        <div className="w-full mt-[25vh] flex flex-col gap-10">
+          <div className="flex flex-col gap-5">
             <h1 className="text-primary font-bold text-3xl">Main Features</h1>
             <p className="text-secondary leading-tight">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum

@@ -4,7 +4,7 @@ import HeroMobile from '../assets/hero/main-screen-small.svg';
 export default function HeroSection() {
   return (
     <>
-      <div className="w-full flex flex-col items-center h-screen">
+      <div className="w-full flex flex-col items-center mt-4">
         <Image src={HeroMobile} alt="heroMobileImage" className="w-full" />
         <div className="flex flex-col items-center mb-10 gap-5">
           <h1 className="text-zinc-100 text-4xl w-[93%] font-bold leading-tight">
